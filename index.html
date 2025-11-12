@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevResume | Catalina Angarita</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <h1 class="logo">DevResume</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link">Inicio</a></li>
+          <li><a href="#projects" class="nav-link">Experiencia</a></li>
+          <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+          <li><a href="#contact" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="navbar-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="menu-btn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="section home-section">
+    <div class="home-background">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+      <div class="grid-pattern"></div>
+    </div>
+    <div class="home-content">
+      <div class="home-text">
+        <div class="availability-badge">
+          <span class="badge-dot"></span>
+          <span>Disponible para nuevos proyectos</span>
+        </div>
+        <h1 class="home-title">
+          Hola! soy <span class="name-highlight">Catalina Angarita</span>.
+        </h1>
+        <p class="home-subtitle">
+          Desarrolladora Back-End | 
+        </p>
+        <p class="home-description">
+          Especialista en transformar ideas en aplicaciones web funcionales, escalables y de alto rendimiento. 
+          Si buscas un desarrollador que lleve tu próximo proyecto al éxito, ¡hablemos!
+        </p>
+        <div class="home-buttons">
+          <a href="https://github.com" target="_blank" class="btn btn-social">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="btn btn-social">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="#contact" class="btn btn-primary">
+            <span>Abrir CV</span>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+      <div class="home-image">
+        <div class="image-wrapper">
+          <div class="image-glow"></div>
+          <img src="assets/img/Perfil_lego.jpeg" alt="Catalina Angarita - Desarrolladora Front-End" class="lego-image" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="about-header-modern">
+        <h2 class="section-title-modern">Sobre mi</h2>
+        <p class="about-description-modern">
+          Soy desarrolladora web con más de 3 años de experiencia en desarrollo front-end, 
+          especializada en tecnologías modernas y diseño responsive. Cuento con una sólida formación 
+          en creación de interfaces de usuario atractivas y funcionales.
+        </p>
+      </div>
+
+      <div class="stack-section">
+        <h3 class="stack-title">Mi Stack</h3>
+        <p class="stack-subtitle">Explora las tecnologías y herramientas que uso para crear experiencias digitales excepcionales.</p>
+        <div class="stack-container">
+          <div class="stack-scroll">
+            <div class="stack-item">HTML5</div>
+            <div class="stack-item">CSS3</div>
+            <div class="stack-item">JavaScript</div>
+            <div class="stack-item">React</div>
+            <div class="stack-item">Git</div>
+            <div class="stack-item">GitHub</div>
+            <div class="stack-item">Bootstrap</div>
+            <div class="stack-item">Tailwind CSS</div>
+            <div class="stack-item">Node.js</div>
+            <div class="stack-item">Responsive Design</div>
+            <div class="stack-item">Web APIs</div>
+            <div class="stack-item">Figma</div>
+            <!-- Duplicado para scroll infinito -->
+            <div class="stack-item">HTML5</div>
+            <div class="stack-item">CSS3</div>
+            <div class="stack-item">JavaScript</div>
+            <div class="stack-item">React</div>
+            <div class="stack-item">Git</div>
+            <div class="stack-item">GitHub</div>
+            <div class="stack-item">Bootstrap</div>
+            <div class="stack-item">Tailwind CSS</div>
+            <div class="stack-item">Node.js</div>
+            <div class="stack-item">Responsive Design</div>
+            <div class="stack-item">Web APIs</div>
+            <div class="stack-item">Figma</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="soft-skills-section">
+        <h3 class="soft-skills-title">Más allá del código</h3>
+        <p class="soft-skills-subtitle">Explora mis intereses y SoftSkills más allá del código.</p>
+        <div class="soft-skills-grid">
+          <div class="soft-skill-item">
+            <span class="soft-skill-emoji">🎨</span>
+            <span class="soft-skill-text">Creatividad</span>
+          </div>
+          <div class="soft-skill-item">
+            <span class="soft-skill-emoji">🤝</span>
+            <span class="soft-skill-text">Trabajo en Equipo</span>
+          </div>
+          <div class="soft-skill-item">
+            <span class="soft-skill-emoji">🧑‍💻</span>
+            <span class="soft-skill-text">Aprendizaje Continuo</span>
+          </div>
+          <div class="soft-skill-item">
+            <span class="soft-skill-emoji">💡</span>
+            <span class="soft-skill-text">Resolución de Problemas</span>
+          </div>
+          <div class="soft-skill-item">
+            <span class="soft-skill-emoji">📱</span>
+            <span class="soft-skill-text">Diseño Responsive</span>
+          </div>
+          <div class="soft-skill-item">
+            <span class="soft-skill-emoji">⚡</span>
+            <span class="soft-skill-text">Optimización</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section testimonials-section">
+    <div class="container">
+      <div class="section-header-modern">
+        <h2 class="section-title-modern">Lo que dicen de mí</h2>
+        <p class="section-subtitle-modern">
+          Detrás de cada proyecto exitoso hay historias de colaboración, innovación y resultados tangibles. 
+          Éstas son algunas de las opiniones de quienes han confiado en mi trabajo.
+        </p>
+      </div>
+      <div class="testimonials-container">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              "Trabajar con Catalina ha sido una experiencia increíble. Su atención al detalle y 
+              su capacidad para crear interfaces elegantes nos han permitido desarrollar soluciones 
+              visualmente atractivas y funcionales."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <span>JD</span>
+            </div>
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">Juan Díaz</h4>
+              <p class="testimonial-role">Diseñador UX/UI</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              "Catalina es una desarrolladora Back-end con una visión clara para los proyectos. 
+              Su capacidad para crear interfaces modernas y responsive ha sido clave para el éxito 
+              de nuestros desarrollos."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <span>MP</span>
+            </div>
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">María Pérez</h4>
+              <p class="testimonial-role">Líder de Desarrollo</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              "El enfoque de Catalina en el diseño y la accesibilidad ha llevado sus habilidades 
+              a otro nivel. Su capacidad para crear experiencias de usuario excepcionales ha sido 
+              esencial para nuestros proyectos."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <span>CG</span>
+            </div>
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">Carlos García</h4>
+              <p class="testimonial-role">Desarrollador Full Stack</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header-modern">
+        <h2 class="section-title-modern">Experiencias Destacadas</h2>
+        <p class="section-subtitle-modern">Descubra cómo he convertido ideas en soluciones digitales impactantes.</p>
+      </div>
+      <div class="projects-container-modern">
+        <article class="project-card-modern">
+          <div class="project-header">
+            <div class="project-company">
+              <span class="project-company-name">Portfolio Personal</span>
+              <span class="project-date">• 2025</span>
+            </div>
+            <a href="#" class="project-link-modern" aria-label="Ver proyecto">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          <h3 class="project-title-modern">Sitio Web Portfolio Interactivo</h3>
+          <div class="project-divider"></div>
+          <p class="project-description-modern">
+            Desarrollé un portafolio web interactivo con diseño responsive, modo oscuro/claro y animaciones suaves. 
+            Implementé una experiencia de usuario moderna que muestra mis proyectos y habilidades de manera elegante.
+          </p>
+          <div class="project-tech-modern">
+            <span class="tech-tag-modern">HTML5</span>
+            <span class="tech-tag-modern">CSS3</span>
+            <span class="tech-tag-modern">JavaScript</span>
+            <span class="tech-tag-modern">Responsive Design</span>
+          </div>
+        </article>
+
+        <article class="project-card-modern">
+          <div class="project-header">
+            <div class="project-company">
+              <span class="project-company-name">Proyecto Académico</span>
+              <span class="project-date">• 2024</span>
+            </div>
+            <a href="#" class="project-link-modern" aria-label="Ver proyecto">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          <h3 class="project-title-modern">Aplicación Web Interactiva</h3>
+          <div class="project-divider"></div>
+          <p class="project-description-modern">
+            Creé una aplicación web moderna con funcionalidades interactivas, gestión de estado y integración 
+            con APIs. La aplicación demuestra habilidades en desarrollo front-end y diseño de interfaces de usuario.
+          </p>
+          <div class="project-tech-modern">
+            <span class="tech-tag-modern">React</span>
+            <span class="tech-tag-modern">JavaScript</span>
+            <span class="tech-tag-modern">CSS3</span>
+            <span class="tech-tag-modern">API Integration</span>
+          </div>
+        </article>
+
+        <article class="project-card-modern">
+          <div class="project-header">
+            <div class="project-company">
+              <span class="project-company-name">Proyecto Personal</span>
+              <span class="project-date">• 2024</span>
+            </div>
+            <a href="#" class="project-link-modern" aria-label="Ver proyecto">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          <h3 class="project-title-modern">Colección de Mini Aplicaciones</h3>
+          <div class="project-divider"></div>
+          <p class="project-description-modern">
+            Desarrollé una colección de aplicaciones JavaScript pequeñas pero funcionales, incluyendo calculadoras, 
+            listas de tareas y temporizadores. Cada proyecto demuestra diferentes conceptos de programación y diseño.
+          </p>
+          <div class="project-tech-modern">
+            <span class="tech-tag-modern">JavaScript</span>
+            <span class="tech-tag-modern">HTML5</span>
+            <span class="tech-tag-modern">CSS3</span>
+            <span class="tech-tag-modern">DOM Manipulation</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-content-modern">
+        <h2 class="section-title-modern">Vamos a crear algo increíble juntos.</h2>
+        <p class="contact-subtitle-modern">
+          ¿Estás listo para darle vida a tu próximo proyecto? Conectémonos y hablemos sobre cómo puedo ayudarte a lograr tus objetivos.
+        </p>
+        <a href="#contact-form" class="btn btn-primary btn-contact">
+          <span>Contactame</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-copyright">© 2025. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+  <div class="theme-transition">
+    <div class="theme-circle"></div>
+  </div>  
+</body>
+</html>
