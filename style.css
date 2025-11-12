@@ -350,7 +350,7 @@ body.dark-mode .grid-pattern {
 }
 
 .home-text {
-  max-width: 600px;
+  max-width: 800px;
   position: relative;
   z-index: 2;
 }
@@ -425,7 +425,7 @@ body.dark-mode .availability-badge {
 
 .home-subtitle {
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 10;
   color: var(--text-color-light);
   margin-bottom: 1.5rem;
   position: relative;
@@ -434,7 +434,8 @@ body.dark-mode .availability-badge {
 
 .home-description {
   font-size: 1.2rem;
-  line-height: 1.8;
+  line-height: 2.1;
+  letter-spacing: 0.02em;
   color: var(--text-color-light);
   margin-bottom: 2.5rem;
   position: relative;
