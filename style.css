@@ -1,3 +1,65 @@
+.main-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  margin-left: 1rem;
+  flex: 0 0 auto;
+}
+
+.main-contact-link i {
+  font-size: 1rem;
+}
+.btn-contact-link span {
+  display: none;
+}
+.education-section {
+  padding: 6rem 0;
+  background: var(--secondary-color);
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.education-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2.25rem;
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 24px var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.education-degree {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+}
+
+.education-institution {
+  font-size: 1rem;
+  color: var(--text-color-light);
+}
+
+.education-list {
+  margin-top: 1.5rem;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.75rem;
+  color: var(--text-color-light);
+  line-height: 1.7;
+}
 /* ============================================
    VARIABLES CSS - TEMA CLARO Y OSCURO
    PALETA MORADOS Y NEGROS
@@ -429,6 +491,10 @@ body.dark-mode .availability-badge {
   color: var(--text-color-light);
   margin-bottom: 1.5rem;
   position: relative;
+
+
+
+  
   z-index: 2;
 }
 
@@ -440,6 +506,45 @@ body.dark-mode .availability-badge {
   margin-bottom: 2.5rem;
   position: relative;
   z-index: 2;
+}
+
+.contact-info-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-icon-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  border: 1px solid rgba(99, 22, 155, 0.35);
+  background: rgba(20, 12, 35, 0.7);
+  color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-icon-btn i {
+  color: var(--primary-color);
+}
+
+.contact-icon-btn:hover {
+  border-color: var(--primary-color);
+  background: rgba(99, 22, 155, 0.25);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(99, 22, 155, 0.25);
+}
+
+.contact-icon-btn:hover i {
+  color: #fff;
 }
 
 .home-buttons {
@@ -622,102 +727,120 @@ body.dark-mode .lego-image {
 }
 
 /* ============================================
-   PROJECTS SECTION MODERNO
+   PROJECTS SECTION (HORIZONTAL CARDS)
    ============================================ */
 .projects-section {
   padding: 6rem 0;
   background: var(--bg-color);
 }
 
-.projects-container-modern {
+.projects-track {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
 }
 
-.project-card-modern {
+.projects-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-track::-webkit-scrollbar-thumb {
+  background: rgba(99, 22, 155, 0.35);
+  border-radius: 999px;
+}
+
+.projects-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-card {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  padding: 2rem;
+  padding: 0;
   transition: all 0.3s ease;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  min-width: 340px;
+  max-width: 360px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  overflow: hidden;
 }
 
-.project-card-modern:hover {
-  border-color: var(--primary-color);
-  box-shadow: 0 8px 24px var(--shadow-hover);
-  transform: translateY(-4px);
+.project-card summary {
+  list-style: none;
+  padding: 1.75rem 1.85rem;
+  cursor: pointer;
 }
 
-.project-header {
+.project-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-summary {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1rem;
+  gap: 1.25rem;
+}
+
+.project-role {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.4rem;
 }
 
 .project-company {
-  display: flex;
+  font-size: 0.95rem;
+  color: var(--text-color-light);
+}
+
+.project-toggle-icon {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-}
-
-.project-company-name {
-  font-weight: 600;
-  color: var(--text-color);
-  font-size: 0.95rem;
-}
-
-.project-date {
-  color: var(--text-color-light);
-  font-size: 0.95rem;
-}
-
-.project-link-modern {
-  color: var(--text-color-light);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.project-link-modern:hover {
-  color: var(--primary-color);
-}
-
-.project-title-modern {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: var(--text-color);
-}
-
-.project-divider {
-  width: 60px;
-  height: 2px;
-  background: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.project-description-modern {
-  font-size: 1.15rem;
-  line-height: 1.75;
-  color: var(--text-color-light);
-  margin-bottom: 1.5rem;
-}
-
-.project-tech-modern {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tech-tag-modern {
-  padding: 0.4rem 0.875rem;
-  background: var(--secondary-color);
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
   border: 1px solid var(--border-color);
-  border-radius: 6px;
-  font-size: 0.875rem;
-  color: var(--text-color);
-  font-weight: 500;
+  color: var(--primary-color);
+  background: rgba(99, 22, 155, 0.08);
+  transition: all 0.3s ease;
+}
+
+.project-card[open] .project-toggle-icon {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.project-card[open] .project-toggle-icon i {
+  transform: rotate(180deg);
+}
+
+.project-toggle-icon i {
+  transition: transform 0.3s ease;
+}
+
+.project-content {
+  padding: 0 1.85rem 1.75rem;
+}
+
+.project-list {
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.75rem;
+  color: var(--text-color-light);
+  line-height: 1.7;
+}
+
+.project-card:not([open]) .project-content {
+  display: none;
 }
 
 /* ============================================
@@ -739,6 +862,44 @@ body.dark-mode .lego-image {
   color: var(--text-color-light);
   max-width: 800px;
   margin: 1.5rem auto 0;
+}
+
+.about-summary-grid {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 3rem;
+}
+
+.about-summary-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.about-summary-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 12px 28px rgba(99, 22, 155, 0.15);
+  transform: translateY(-4px);
+}
+
+.about-summary-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.about-summary-card ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: var(--text-color-light);
+  display: grid;
+  gap: 0.75rem;
+  line-height: 1.7;
 }
 
 .stack-section {
@@ -855,74 +1016,50 @@ body.dark-mode .lego-image {
 }
 
 /* ============================================
-   TESTIMONIALS SECTION
+   SKILLS SECTION
    ============================================ */
-.testimonials-section {
+.skills-section {
   padding: 6rem 0;
   background: var(--bg-color);
 }
 
-.testimonials-container {
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
 
-.testimonial-card {
+.skills-card {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.testimonial-card:hover {
+.skills-card:hover {
   border-color: var(--primary-color);
   box-shadow: 0 8px 24px var(--shadow-hover);
   transform: translateY(-4px);
 }
 
-.testimonial-content {
-  margin-bottom: 1.5rem;
-}
-
-.testimonial-text {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--text-color-light);
-  font-style: italic;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.testimonial-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--gradient-1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.testimonial-name {
-  font-size: 1rem;
+.skills-card h3 {
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-color);
-  margin-bottom: 0.25rem;
 }
 
-.testimonial-role {
-  font-size: 0.875rem;
+.skills-card ul {
+  list-style: disc;
+  padding-left: 1.3rem;
   color: var(--text-color-light);
+  display: grid;
+  gap: 0.75rem;
+  line-height: 1.7;
 }
 
 /* ============================================
@@ -999,6 +1136,14 @@ body.dark-mode .lego-image {
   transform: translateY(0);
 }
 
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99, 22, 155, 0.35), transparent);
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
@@ -1018,12 +1163,28 @@ body.dark-mode .lego-image {
     margin: 0 auto;
   }
 
-  .projects-container-modern {
-    gap: 1.5rem;
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
-  .testimonials-container {
+  .education-grid {
     grid-template-columns: 1fr;
+  }
+
+  .projects-track {
+    gap: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .project-card {
+    min-width: 300px;
+    max-width: 320px;
+  }
+
+  .contact-info-buttons {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
   }
 
   .orb-1,
@@ -1142,6 +1303,20 @@ body.dark-mode .lego-image {
   .soft-skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .education-card,
+  .skills-card {
+    padding: 1.8rem;
+  }
+
+  .projects-track {
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    min-width: 260px;
+    max-width: 280px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1160,12 +1335,34 @@ body.dark-mode .lego-image {
     padding: 0.9rem 1.4rem;
   }
 
-  .project-card-modern {
-    padding: 1.5rem;
-  }
-
   .soft-skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-width: calc(100% - 1.5rem);
+    max-width: calc(100% - 1.5rem);
+  }
+
+  .projects-track {
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .contact-info-buttons {
+    gap: 0.6rem;
+  }
+
+  .contact-icon-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .main-contact-link {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    padding: 0.85rem 1.8rem;
   }
 }
 

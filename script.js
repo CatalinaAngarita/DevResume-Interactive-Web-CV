@@ -4,6 +4,7 @@
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 const themeIcon = toggleBtn.querySelector("i");
+const contactButtons = document.querySelectorAll(".contact-icon-btn");
 
 // Función para aplicar el tema
 function applyTheme(theme) {
@@ -241,6 +242,37 @@ window.addEventListener("scroll", () => {
   debouncedUpdateActiveLink();
   debouncedCheckVisibility();
 });
+
+// ============================================
+// 🔗 CONTACT QUICK ACTION BUTTONS
+// ============================================
+if (contactButtons.length) {
+  contactButtons.forEach(button => {
+    const contactValue = button.getAttribute("data-contact");
+    const targetBlank = button.getAttribute("data-target") === "_blank";
+
+    if (!contactValue) return;
+
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      if (contactValue.startsWith("mailto:") || contactValue.startsWith("tel:")) {
+        window.location.href = contactValue;
+      } else if (contactValue.startsWith("#")) {
+        const targetEl = document.querySelector(contactValue);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        if (targetBlank) {
+          window.open(contactValue, "_blank", "noopener");
+        } else {
+          window.location.href = contactValue;
+        }
+      }
+    });
+  });
+}
 
 // ============================================
 // 🎭 TYPING EFFECT (Opcional - efecto de escritura)
