@@ -22,27 +22,19 @@ function animateThemeIcon() {
   setTimeout(() => themeIcon.classList.remove("rotate-icon"), 500);
 }
 
-toggleBtn.addEventListener("click", () => {
-  const isDark = body.classList.contains("dark-mode");
-  const newTheme = isDark ? "light" : "dark";
-  applyTheme(newTheme);
-  localStorage.setItem("theme", newTheme);
-  animateThemeIcon(); // ✨ animación al cambiar
-});
-
-
 // Cargar tema guardado
 const savedTheme = localStorage.getItem("theme") || "light";
 applyTheme(savedTheme);
 
-// Toggle del tema
+// Toggle del tema sin animación extra
 toggleBtn.addEventListener("click", () => {
   const isDark = body.classList.contains("dark-mode");
   const newTheme = isDark ? "light" : "dark";
-  
   applyTheme(newTheme);
   localStorage.setItem("theme", newTheme);
+  animateThemeIcon();
 });
+
 
 // ============================================
 // 📱 NAVIGATION MENU (Responsive)
