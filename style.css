@@ -98,13 +98,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 2rem;
+  padding: 1.85rem 2.75rem;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .logo {
-  font-size: 1.25rem;
+  font-size: 1.55rem;
   font-weight: 600;
   color: var(--text-color);
   text-decoration: none;
@@ -116,15 +116,17 @@ body {
   gap: 2.5rem;
   list-style: none;
   align-items: center;
+  font-weight: 600;
 }
 
 .nav-link {
   color: var(--text-color);
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: 600;
+  font-size: 1.18rem;
   transition: color 0.3s ease;
   position: relative;
+  letter-spacing: 0.01em;
 }
 
 .nav-link:hover,
@@ -357,11 +359,11 @@ body.dark-mode .grid-pattern {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.25rem;
   background: var(--secondary-color);
   border: 1px solid var(--border-color);
   border-radius: 50px;
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   color: var(--text-color-light);
   margin-bottom: 2rem;
   backdrop-filter: blur(10px);
@@ -395,7 +397,7 @@ body.dark-mode .availability-badge {
 }
 
 .home-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -422,7 +424,7 @@ body.dark-mode .availability-badge {
 }
 
 .home-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: var(--text-color-light);
   margin-bottom: 1.5rem;
@@ -431,7 +433,7 @@ body.dark-mode .availability-badge {
 }
 
 .home-description {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   color: var(--text-color-light);
   margin-bottom: 2.5rem;
@@ -449,11 +451,11 @@ body.dark-mode .availability-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.875rem 1.5rem;
+  padding: 1rem 1.75rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   transition: all 0.3s ease;
   border: 1px solid transparent;
   cursor: pointer;
@@ -515,7 +517,7 @@ body.dark-mode .availability-badge {
 
 .image-wrapper {
   width: 100%;
-  max-width: 500px;
+  max-width: 460px;
   position: relative;
   z-index: 1;
 }
@@ -525,8 +527,8 @@ body.dark-mode .availability-badge {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120%;
-  height: 120%;
+  width: 125%;
+  height: 125%;
   background: radial-gradient(circle, rgba(121, 77, 152, 0.2) 0%, transparent 70%);
   border-radius: 50%;
   filter: blur(40px);
@@ -555,7 +557,7 @@ body.dark-mode .image-glow {
 }
 
 .lego-image {
-  width: 100%;
+  width: 94%;
   height: auto;
   border-radius: 16px;
   position: relative;
@@ -994,7 +996,7 @@ body.dark-mode .lego-image {
   }
 
   .image-wrapper {
-    max-width: 400px;
+    max-width: 380px;
     margin: 0 auto;
   }
 
@@ -1019,20 +1021,22 @@ body.dark-mode .lego-image {
 
   .image-glow {
     opacity: 0.5;
+    width: 135%;
+    height: 135%;
   }
 }
 
 @media (max-width: 768px) {
   .navbar-container {
-    padding: 1rem 1.5rem;
+    padding: 1.4rem 1.7rem;
   }
 
   .nav-links {
     position: fixed;
-    top: 70px;
+    top: 80px;
     right: -100%;
     width: 280px;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 80px);
     background: var(--navbar-bg);
     backdrop-filter: blur(20px);
     flex-direction: column;
@@ -1041,6 +1045,10 @@ body.dark-mode .lego-image {
     transition: right 0.3s ease;
     gap: 1.5rem;
     border-left: 1px solid var(--border-color);
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
   }
 
   .nav-links.active {
@@ -1078,6 +1086,28 @@ body.dark-mode .lego-image {
     padding: 4rem 0;
   }
 
+  .availability-badge {
+    font-size: 0.9rem;
+    padding: 0.55rem 1.1rem;
+  }
+
+  .home-title {
+    font-size: clamp(2.4rem, 6.5vw, 3.5rem);
+  }
+
+  .home-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .home-description {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.95rem 1.6rem;
+  }
+
   .container {
     padding: 0 1.5rem;
   }
@@ -1098,7 +1128,7 @@ body.dark-mode .lego-image {
 
 @media (max-width: 480px) {
   .home-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .home-buttons {
@@ -1108,6 +1138,8 @@ body.dark-mode .lego-image {
   .btn {
     width: 100%;
     justify-content: center;
+    font-size: 0.95rem;
+    padding: 0.9rem 1.4rem;
   }
 
   .project-card-modern {
