@@ -1150,3 +1150,72 @@ body, .navbar, .card, .section, .btn, .nav-link {
   opacity: 0.8;
   box-shadow: 0 0 60px 20px rgba(123, 79, 224, 0.2);
 }
+
+.profile-photo-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* 💜 Imagen principal */
+.profile-photo {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 25px rgba(123, 79, 224, 0.35);
+  animation: subtleGlow 6s ease-in-out infinite;
+}
+
+/* ✨ Efecto de aura viva (animación constante) */
+.profile-photo-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(123, 79, 224, 0.35),
+    rgba(123, 79, 224, 0.15) 40%,
+    transparent 70%
+  );
+  filter: blur(25px);
+  animation: auraFlow 8s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+/* 🌈 Animaciones */
+@keyframes subtleGlow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(123, 79, 224, 0.35);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(123, 79, 224, 0.55);
+    transform: scale(1.015);
+  }
+}
+
+@keyframes auraFlow {
+  0% {
+    transform: scale(1.25);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.25);
+    opacity: 0.85;
+  }
+}
+
+/* ✨ Hover: mantiene tu efecto de sobresalido */
+.profile-photo:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 45px rgba(123, 79, 224, 0.6);
+}
