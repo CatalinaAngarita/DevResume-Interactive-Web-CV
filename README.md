@@ -41,7 +41,7 @@ DevResume-Interactive-Web-CV/
 3. O cambia el nombre en `index.html` línea 67 para que coincida con tu archivo
 
 ```html
-<img src="assets/img/lego-figure.png" alt="Catalina Angarita - Desarrolladora Front-End" class="lego-image" />
+<img src="assets/img/lego-figure.png" alt="Catalina Angarita - Desarrolladora Back-End" class="lego-image" />
 ```
 
 ### Formatos de imagen recomendados:
