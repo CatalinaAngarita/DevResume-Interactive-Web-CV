@@ -16,7 +16,7 @@
 }
 .education-section {
   padding: 6rem 0;
-  background: var(--secondary-color);
+  background: var(--section-main-bg);
 }
 
 .education-grid {
@@ -78,6 +78,8 @@
   --border-color: #d7c6ef;
     --shadow: rgba(0, 0, 0, 0.06);
   --shadow-hover: rgba(99, 22, 155, 0.2);
+  --section-main-bg: #ffffff;
+  --section-alt-bg: #f1e9ff;
   
     /* Fondos dinámicos */
   --home-gradient: linear-gradient(135deg, #ffffff 0%, #efe3ff 100%);
@@ -101,6 +103,8 @@
   --border-color: rgba(168, 121, 255, 0.35);
   --shadow: rgba(49, 18, 112, 0.55);
   --shadow-hover: rgba(153, 102, 255, 0.45);
+  --section-main-bg: #140f25;
+  --section-alt-bg: #0a0718;
 
   /* Fondos dinámicos */
   --home-gradient: linear-gradient(150deg, #080511 0%, #120b28 45%, #1c0f3b 100%);
@@ -731,7 +735,7 @@ body.dark-mode .lego-image {
    ============================================ */
 .projects-section {
   padding: 6rem 0;
-  background: var(--bg-color);
+  background: var(--section-main-bg);
 }
 
 .projects-track {
@@ -848,7 +852,7 @@ body.dark-mode .lego-image {
    ============================================ */
 .about-section {
   padding: 6rem 0;
-  background: var(--secondary-color);
+  background: var(--section-alt-bg);
 }
 
 .about-header-modern {
@@ -1020,7 +1024,7 @@ body.dark-mode .lego-image {
    ============================================ */
 .skills-section {
   padding: 6rem 0;
-  background: var(--bg-color);
+  background: var(--section-alt-bg);
 }
 
 .skills-grid {
@@ -1067,7 +1071,7 @@ body.dark-mode .lego-image {
    ============================================ */
 .contact-section {
   padding: 6rem 0;
-  background: var(--secondary-color);
+  background: var(--section-alt-bg);
 }
 
 .contact-content-modern {
