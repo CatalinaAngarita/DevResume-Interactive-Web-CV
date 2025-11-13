@@ -21,13 +21,13 @@ Portafolio web interactivo desarrollado con HTML, CSS y JavaScript que muestra l
 DevResume-Interactive-Web-CV/
 │
 ├── index.html          # Estructura HTML principal
-├── style.css           # Estilos CSS con paleta morada/negra
-├── script.js           # Funcionalidad JavaScript
+├── style.css           # Estilos y temas claro/oscuro
+├── script.js           # Interactividad (toggle de tema, menú móvil, scroll, etc.)
 ├── README.md           # Este archivo
 │
 └── assets/
     ├── img/
-    │   └── lego-figure.png  # ⚠️ IMPORTANTE: Coloca tu imagen LEGO aquí
+    │   └── Perfil_lego.PNG  # Imagen LEGO (puedes reemplazarla por la tuya)
     ├── icons/
     └── projects/
 ```
@@ -36,12 +36,11 @@ DevResume-Interactive-Web-CV/
 
 **IMPORTANTE**: Para que la imagen LEGO se muestre correctamente en la sección de inicio:
 
-1. Coloca tu imagen LEGO en la carpeta `assets/img/`
-2. Asegúrate de que el archivo se llame `lego-figure.png`
-3. O cambia el nombre en `index.html` línea 67 para que coincida con tu archivo
+1. Coloca tu imagen LEGO en la carpeta `assets/img/`.
+2. Usa el nombre `Perfil_lego.PNG` para reemplazar la imagen existente **o** actualiza el atributo `src` en `index.html` para que apunte a tu archivo.
 
 ```html
-<img src="assets/img/lego-figure.png" alt="Catalina Angarita - Desarrolladora Back-End" class="lego-image" />
+<img src="assets/img/Perfil_lego.PNG" alt="Catalina Angarita - Desarrolladora Back-End" class="lego-image" />
 ```
 
 ### Formatos de imagen recomendados:
@@ -79,13 +78,32 @@ La aplicación usa una paleta de colores morados y negros:
 ## 🚀 Cómo Usar
 
 1. **Clona o descarga el proyecto**
-2. **Coloca tu imagen LEGO** en `assets/img/lego-figure.png`
+2. **Coloca tu imagen LEGO** en `assets/img/Perfil_lego.PNG` (o ajusta la ruta en `index.html`)
 3. **Abre `index.html`** en tu navegador
 4. **Personaliza el contenido** en `index.html`:
    - Nombre y descripción
    - Proyectos
    - Información de contacto
    - Enlaces de redes sociales
+
+## ▶️ Cómo levantar el proyecto
+
+El portafolio es 100 % estático, por lo que no necesitas dependencias ni compilación. Puedes verlo de tres formas:
+
+1. **Abrir el archivo directamente**  
+   - Haz doble clic sobre `index.html` o arrástralo a tu navegador.
+2. **Usar Live Server en VS Code (recomendado)**  
+   - Instala la extensión *Live Server*.  
+   - Haz clic derecho en `index.html` y selecciona **Open with Live Server** para recargar automáticamente cada cambio.
+3. **Servirlo con Node.js (opcional)**  
+   ```bash
+   npx serve .
+   # o
+   npx http-server .
+   ```
+   Luego abre la URL que aparezca en la consola (generalmente `http://localhost:3000` o `http://127.0.0.1:8080`).
+
+> Cualquier servidor web estático funciona; lo importante es que `index.html` esté accesible desde el navegador.
 
 ## 🛠️ Personalización
 
@@ -101,18 +119,29 @@ Los colores están definidos en variables CSS al inicio de `style.css`:
 ```
 
 ### Agregar Proyectos
-Edita la sección de proyectos en `index.html`:
+Duplica uno de los bloques `<details class="project-card">` y edítalo con tu información:
 
 ```html
-<div class="project-card">
-  <div class="project-image">
-    <!-- Tu contenido -->
-  </div>
+<details class="project-card">
+  <summary>
+    <div class="project-summary">
+      <div>
+        <h3 class="project-role">Rol o título</h3>
+        <p class="project-company">Nombre del proyecto • Fecha</p>
+      </div>
+      <span class="project-toggle-icon">
+        <i class="fas fa-chevron-down"></i>
+      </span>
+    </div>
+  </summary>
   <div class="project-content">
-    <h3 class="project-title">Título del Proyecto</h3>
-    <!-- Más contenido -->
+    <ul class="project-list">
+      <li>Responsabilidad o logro principal.</li>
+      <li>Tecnología destacada.</li>
+      <li>Resultado o métrica relevante.</li>
+    </ul>
   </div>
-</div>
+</details>
 ```
 
 ### Modificar Animaciones
@@ -127,9 +156,9 @@ Las animaciones están en `style.css` en la sección de `@keyframes`:
 ## 📱 Responsive Design
 
 El diseño es completamente responsive:
-- **Desktop**: Layout de 2 columnas en la sección de inicio
-- **Tablet**: Layout adaptativo
-- **Móvil**: Menú hamburguesa y layout de una columna
+- **Desktop**: Layout de 2 columnas y barra flotante centrada.
+- **Tablet**: Ajustes progresivos mediante media queries (contenidos apilados, navbar compacta).
+- **Móvil**: Menú hamburguesa, tarjetas en una columna y tipografías optimizadas.
 
 ## 🌐 Navegadores Soportados
 
