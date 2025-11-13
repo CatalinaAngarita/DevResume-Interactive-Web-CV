@@ -202,19 +202,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ============================================
 // 🌊 NAVBAR SCROLL EFFECT
 // ============================================
-const navbar = document.querySelector(".navbar");
+const floatingNav = document.querySelector(".floating-nav");
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
   
   // Efecto en el navbar al hacer scroll
   if (currentScroll > 50) {
-    if (navbar) {
-      navbar.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)";
+    if (floatingNav) {
+      floatingNav.classList.add("nav-scrolled");
     }
   } else {
-    if (navbar) {
-      navbar.style.boxShadow = "none";
+    if (floatingNav) {
+      floatingNav.classList.remove("nav-scrolled");
     }
   }
 });

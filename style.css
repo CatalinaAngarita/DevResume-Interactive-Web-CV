@@ -153,36 +153,70 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: var(--navbar-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-color);
+  background: transparent;
   transition: all 0.3s ease;
+  padding-top: 1.5rem;
 }
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1.85rem 2.75rem;
-  max-width: 1400px;
+  position: relative;
+  padding: 0 1.5rem;
+}
+
+.floating-nav {
+  background: var(--navbar-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 1.1rem 1.6rem;
+  max-width: 720px;
+  width: min(720px, calc(100% - 3rem));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 18px 45px rgba(99, 22, 155, 0.12);
   margin: 0 auto;
 }
 
-.logo {
-  font-size: 1.55rem;
-  font-weight: 600;
-  color: var(--text-color);
-  text-decoration: none;
-  letter-spacing: -0.02em;
+.floating-nav.nav-scrolled {
+  box-shadow: 0 22px 55px rgba(99, 22, 155, 0.2);
+  transform: translateY(-4px);
+}
+
+body.dark-mode .floating-nav {
+  box-shadow: 0 28px 65px rgba(20, 8, 45, 0.45);
+}
+
+body.dark-mode .floating-nav.nav-scrolled {
+  box-shadow: 0 34px 75px rgba(10, 4, 28, 0.7);
+}
+
+.navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  justify-content: center;
+  gap: 2.3rem;
   list-style: none;
   align-items: center;
   font-weight: 600;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .nav-link {
@@ -1251,8 +1285,30 @@ body.dark-mode .lego-image {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding-top: 1.2rem;
+  }
+
   .navbar-container {
-    padding: 1.4rem 1.7rem;
+    padding: 0 1rem;
+  }
+
+  .floating-nav {
+    padding: 0.9rem 1.2rem;
+    width: calc(100% - 2rem);
+    max-width: none;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .navbar-links {
+    padding-right: 0;
+  }
+
+  .navbar-actions {
+    gap: 0.75rem;
+    position: static;
+    transform: none;
   }
 
   .nav-links {
@@ -1365,6 +1421,22 @@ body.dark-mode .lego-image {
 }
 
 @media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 0.75rem;
+  }
+
+  .floating-nav {
+    padding: 0.85rem 1rem;
+    border-radius: 16px;
+    width: calc(100% - 1.5rem);
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .navbar-links {
+    justify-content: flex-start;
+  }
+
   .home-title {
     font-size: 2.2rem;
   }
