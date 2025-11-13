@@ -82,8 +82,8 @@
   --section-alt-bg: #f1e9ff;
   
     /* Fondos dinámicos */
-  --home-gradient: linear-gradient(135deg, #ffffff 0%, #efe3ff 100%);
-  --home-gradient-radial: radial-gradient(circle at 30% 40%, rgba(99, 22, 155, 0.2) 0%, transparent 55%);
+  --home-gradient: linear-gradient(155deg, #faf5ff 0%, #efe2ff 42%, #e1d4ff 100%);
+  --home-gradient-radial: radial-gradient(circle at 22% 34%, rgba(150, 96, 220, 0.45) 0%, transparent 58%);
   
     --navbar-bg: rgba(255, 255, 255, 0.85);
     --navbar-shadow: rgba(0, 0, 0, 0.05);
@@ -378,6 +378,24 @@ body {
   }
 }
 
+body:not(.dark-mode) .orb-1 {
+  background: radial-gradient(circle, rgba(166, 120, 236, 0.55) 0%, rgba(166, 120, 236, 0.28) 44%, rgba(166, 120, 236, 0) 72%);
+  filter: blur(90px);
+  opacity: 0.9;
+}
+
+body:not(.dark-mode) .orb-2 {
+  background: radial-gradient(circle, rgba(181, 132, 248, 0.45) 0%, rgba(181, 132, 248, 0.2) 42%, rgba(181, 132, 248, 0) 70%);
+  filter: blur(105px);
+  opacity: 0.85;
+}
+
+body:not(.dark-mode) .orb-3 {
+  background: radial-gradient(circle, rgba(160, 110, 232, 0.48) 0%, rgba(160, 110, 232, 0.18) 43%, rgba(160, 110, 232, 0) 70%);
+  filter: blur(95px);
+  opacity: 0.88;
+}
+
 body.dark-mode .orb-1 {
   background: radial-gradient(circle, rgba(174, 133, 255, 0.55) 0%, rgba(149, 102, 255, 0.28) 45%, rgba(137, 82, 240, 0) 72%);
   filter: blur(90px);
@@ -401,6 +419,13 @@ body.dark-mode .grid-pattern {
     linear-gradient(rgba(180, 138, 255, 0.15) 1px, transparent 1px),
     linear-gradient(90deg, rgba(180, 138, 255, 0.15) 1px, transparent 1px);
   opacity: 0.52;
+}
+
+body:not(.dark-mode) .grid-pattern {
+  background-image: 
+    linear-gradient(rgba(156, 110, 221, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(156, 110, 221, 0.12) 1px, transparent 1px);
+  opacity: 0.38;
 }
 
 .home-content {
@@ -490,26 +515,28 @@ body.dark-mode .availability-badge {
 }
 
 .home-subtitle {
-  font-size: 1.4rem;
-  font-weight: 10;
-  color: var(--text-color-light);
-  margin-bottom: 1.5rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 1.6rem;
   position: relative;
-
-
-
-  
   z-index: 2;
+  letter-spacing: 0.01em;
+}
+
+body.dark-mode .home-subtitle {
+  color: var(--primary-color-light);
 }
 
 .home-description {
-  font-size: 1.2rem;
-  line-height: 2.1;
-  letter-spacing: 0.02em;
+  font-size: 1.15rem;
+  line-height: 1.95;
+  letter-spacing: 0.01em;
   color: var(--text-color-light);
   margin-bottom: 2.5rem;
   position: relative;
   z-index: 2;
+  max-width: 880px;
 }
 
 .contact-info-buttons {
@@ -651,6 +678,14 @@ body.dark-mode .contact-icon-btn {
   z-index: 0;
   animation: glowPulse 4s ease-in-out infinite;
   opacity: 0.6;
+}
+
+body:not(.dark-mode) .image-glow {
+  background: radial-gradient(circle, rgba(182, 130, 245, 0.6) 0%, rgba(152, 96, 225, 0.3) 45%, rgba(131, 72, 200, 0.14) 68%, transparent 78%);
+  filter: blur(55px);
+  opacity: 0.9;
+  width: 130%;
+  height: 130%;
 }
 
 body.dark-mode .image-glow {
