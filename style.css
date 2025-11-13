@@ -525,15 +525,21 @@ body.dark-mode .availability-badge {
   width: 54px;
   height: 54px;
   border-radius: 14px;
-  border: 1px solid rgba(99, 22, 155, 0.35);
-  background: rgba(20, 12, 35, 0.7);
-  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--primary-color);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 1.15rem;
   transition: all 0.3s ease;
   cursor: pointer;
+}
+
+body.dark-mode .contact-icon-btn {
+  border: 1px solid rgba(99, 22, 155, 0.35);
+  background: rgba(20, 12, 35, 0.7);
+  color: var(--text-color);
 }
 
 .contact-icon-btn i {
