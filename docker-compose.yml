@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: devresume-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    volumes:
+      # Hot-reload: montar el código para ver cambios en tiempo real
+      - ./index.html:/usr/share/nginx/html/index.html
+      - ./style.css:/usr/share/nginx/html/style.css
+      - ./script.js:/usr/share/nginx/html/script.js
+      - ./assets:/usr/share/nginx/html/assets
+

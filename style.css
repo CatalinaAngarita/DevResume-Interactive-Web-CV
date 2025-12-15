@@ -1586,3 +1586,29 @@ body, .navbar, .card, .section, .btn, .nav-link {
   transform: scale(1.07);
   box-shadow: 0 0 45px rgba(123, 79, 224, 0.6);
 }
+
+/* ============================================
+   n8n CHAT WIDGET STYLES
+   ============================================ */
+/* Asegurar que el chat aparezca en la esquina inferior derecha */
+n8n-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+/* Ajustes responsivos para el chat */
+@media (max-width: 768px) {
+  n8n-chat {
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  n8n-chat {
+    bottom: 10px;
+    right: 10px;
+  }
+}

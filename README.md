@@ -105,6 +105,60 @@ El portafolio es 100 % estático, por lo que no necesitas dependencias ni comp
 
 > Cualquier servidor web estático funciona; lo importante es que `index.html` esté accesible desde el navegador.
 
+## 🐳 Levantar con Docker
+
+El proyecto incluye configuración de Docker para facilitar el despliegue y desarrollo.
+
+### Requisitos previos
+- Docker instalado ([Descargar Docker](https://www.docker.com/get-started))
+- Docker Compose (incluido con Docker Desktop)
+
+### Opción 1: Usar Docker Compose (Recomendado)
+
+```bash
+# Construir y levantar el contenedor
+docker-compose up -d
+
+# Ver los logs
+docker-compose logs -f
+
+# Detener el contenedor
+docker-compose down
+```
+
+El sitio estará disponible en `http://localhost:8080`
+
+### Opción 2: Usar Docker directamente
+
+```bash
+# Construir la imagen
+docker build -t devresume-web .
+
+# Ejecutar el contenedor
+docker run -d -p 8080:80 --name devresume-web devresume-web
+
+# Ver los logs
+docker logs -f devresume-web
+
+# Detener y eliminar el contenedor
+docker stop devresume-web
+docker rm devresume-web
+```
+
+### Comandos útiles de Docker
+
+```bash
+# Ver contenedores en ejecución
+docker ps
+
+# Acceder al contenedor (bash)
+docker exec -it devresume-web sh
+
+# Reconstruir la imagen después de cambios
+docker-compose build --no-cache
+docker-compose up -d
+```
+
 ## 🛠️ Personalización
 
 ### Cambiar Colores
